@@ -6,7 +6,12 @@ class ArrayIndex
      Scanner s = new Scanner(System.in);
      System.out.println("enter size of array");
      int a[] = new int[s.nextInt()];
-     int b[] = new int[(a.length/2)+1];
+     int bsize =0;
+     if(a.length%2==0)
+          bsize = a.length/2;
+     else
+          bsize = (a.length/2)+1;
+     int b[] = new int[bsize];
      System.out.println("enter elements");
      for(int x=0; x<a.length; x++)
      {
